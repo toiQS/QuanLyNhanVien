@@ -19,12 +19,10 @@ public class QuanLy {
         System.out.println("+---------------------------------+");
         System.out.println("|            Xoá                  |");
         System.out.println("+---------------------------------+");
-        System.out.println("|   1. Xoá Gia Dụng               |");
-        System.out.println("|   2. Xoá Nước                   |");
-        System.out.println("|   3. Xoá Tươi Sống              |");
-        System.out.println("|   4. Xoá Khác                   |");
-        System.out.println("|   5. Xoá Nhân Sự                |");
-        System.out.println("|   6. Trở về                     |");
+        System.out.println("|   1. Thêm Nhân Viên             |");
+        System.out.println("|   2. Thêm Lao Công              |");
+        System.out.println("|   3. Thêm Bảo Vệ                |");
+        System.out.println("|   4. Trở về                     |");
         System.out.println("+---------------------------------+");
     }
 
@@ -35,12 +33,10 @@ public class QuanLy {
         System.out.println("+---------------------------------+");
         System.out.println("|            Sửa                  |");
         System.out.println("+---------------------------------+");
-        System.out.println("|   1. Sửa Gia Dụng               |");
-        System.out.println("|   2. Sửa Nước                   |");
-        System.out.println("|   3. Sửa Tươi Sống              |");
-        System.out.println("|   4. Sửa Khác                   |");
-        System.out.println("|   5. Sửa Nhân Sự                |");
-        System.out.println("|   6. Trở về                     |");
+        System.out.println("|   1. Thêm Nhân Viên             |");
+        System.out.println("|   2. Thêm Lao Công              |");
+        System.out.println("|   3. Thêm Bảo Vệ                |");
+        System.out.println("|   4. Trở về                     |");
         System.out.println("+---------------------------------+");
     }
 
@@ -91,17 +87,46 @@ public class QuanLy {
         System.out.println("+---------------------------------+");
         System.out.println("|            Tìm Kiếm             |");
         System.out.println("+---------------------------------+");
-        System.out.println("|   1. Tìm kiếm Gia Dụng          |");
-        System.out.println("|   2. Tìm kiếm Nước              |");
-        System.out.println("|   3. Tìm kiếm Tươi Sống         |");
-        System.out.println("|   4. Tìm kiếm Khác              |");
-        System.out.println("|   5. Tìm kiếm Nhân Sự           |");
-        System.out.println("|   6. Trở về                     |");
+        System.out.println("|   1. Thêm Nhân Viên             |");
+        System.out.println("|   2. Thêm Lao Công              |");
+        System.out.println("|   3. Thêm Bảo Vệ                |");
+        System.out.println("|   4. Trở về                     |");
         System.out.println("+---------------------------------+");
     }
 
     public void admin() throws IOException {
-       
+       int endadmin = 0;
+       do{
+           menu();
+           switch (luaChon()){
+               case 1 ->{
+                   int endthem = 0;
+                   do{
+                       them();
+                       switch (luaChon()){
+                           case 1->{
+                               System.out.println("-------Thêm nhân viên-------");
+                               NhanSu nhanvien = new NhanVien();
+                               nhanvien.add();
+                           }
+                           case 2->{
+                               System.out.println("-------Thêm Lao Công------");
+                               NhanSu laocong = new LaoCong();
+                               laocong.add();
+                           }
+                           case 3 ->{
+                               System.out.println("------Thêm Bảo Vệ-----");
+                               NhanSu baove = new BaoVe();
+                               baove.add();
+                           }
+                       }
+                   }while (endthem == 0);
+               }
+               case 2->{
+                    int endXoa
+               }
+           }
+       }while (endadmin == 0);
     }
 
     public void menu() {
@@ -125,14 +150,12 @@ public class QuanLy {
             System.out.println();
         }
         System.out.println("+---------------------------------+");
-        System.out.println("|            Them                 |");
+        System.out.println("|            Thêm                 |");
         System.out.println("+---------------------------------+");
-        System.out.println("|   1. Thêm Gia Dụng              |");
-        System.out.println("|   2. Thêm Nước                  |");
-        System.out.println("|   3. Thêm Tươi Sống             |");
-        System.out.println("|   4. Thêm Khác                  |");
-        System.out.println("|   5. Thêm Nhân Sự               |");
-        System.out.println("|   6. Trở về                     |");
+        System.out.println("|   1. Thêm Nhân Viên             |");
+        System.out.println("|   2. Thêm Lao Công              |");
+        System.out.println("|   3. Thêm Bảo Vệ                |");
+        System.out.println("|   4. Trở về                     |");
         System.out.println("+---------------------------------+");
     }
 

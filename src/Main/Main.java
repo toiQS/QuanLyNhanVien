@@ -15,7 +15,7 @@ import java.util.Scanner;
  * |        Quản lý nhân viên        |
  * +---------------------------------+
  * |    1. Admin                     |
- * |    2. Khách hàng                |
+ * |    2.Thoát               |
  * +---------------------------------+
  * <p>
  * +---------------------------------+
@@ -78,11 +78,10 @@ public class Main {
             System.out.println();
         }
         System.out.println("+---------------------------------+");
-        System.out.println("|        Cửa hàng mini            |");
+        System.out.println("|       Quản Lý Nhân Viên         |");
         System.out.println("+---------------------------------+");
         System.out.println("|    1. Quản lý                   |");
-        System.out.println("|    2. Khách hàng                |");
-        System.out.println("|    3. Thoát                     |");
+        System.out.println("|    2. Thoát                     |");
         System.out.println("+---------------------------------+");
     }
 
