@@ -119,11 +119,139 @@ public class QuanLy {
                                NhanSu baove = new BaoVe();
                                baove.add();
                            }
+                           case 4->{
+                               endthem = 1;
+                           }
+                           default -> {
+                               System.out.println("Không có lựa chọn này!!!");
+                           }
                        }
                    }while (endthem == 0);
                }
                case 2->{
-                    int endXoa
+                    int endxoa= 0;
+                    do {
+                        xoa();
+                        switch (luaChon()){
+                            case 1->{
+                                System.out.println("-------Xóa nhân viên-------");
+                                NhanSu nhanvien = new NhanVien();
+                                nhanvien.del();
+                            }
+                            case 2->{
+                                System.out.println("-------Xóa Lao Công------");
+                                NhanSu laocong = new LaoCong();
+                                laocong.del();
+                            }
+                            case 3 ->{
+                                System.out.println("------Xóa Bảo Vệ-----");
+                                NhanSu baove = new BaoVe();
+                                baove.del();
+                            }
+                            case 4->{
+                                endxoa = 1;
+                            }
+                            default -> {
+                                System.out.println("Không có lựa chọn này!!!");
+                            }
+                        }
+                    }while (endxoa == 0);
+               }
+               case 3->{
+                   int endSua = 0;
+                   do {
+                       sua();
+                       switch (luaChon()){
+                           case 1->{
+                               System.out.println("-------Sửa nhân viên-------");
+                               NhanSu nhanvien = new NhanVien();
+                               nhanvien.SuaThongTin();
+                           }
+                           case 2->{
+                               System.out.println("-------Sửa Lao Công------");
+                               NhanSu laocong = new LaoCong();
+                               laocong.SuaThongTin();
+                           }
+                           case 3 ->{
+                               System.out.println("------Sửa Bảo Vệ-----");
+                               NhanSu baove = new BaoVe();
+                               baove.SuaThongTin();
+                           }
+                           case 4->{
+                               endSua = 1;
+                           }
+                           default -> {
+                               System.out.println("Không có lựa chọn này!!!");
+                           }
+                       }
+                   }while (endSua ==0);
+               }
+               case 4->{
+                   int endTimKiem = 0;
+                   do {
+                       timKiem();
+                       switch (luaChon()){
+                           case 1->{
+                               System.out.println("-------Sửa nhân viên-------");
+                               NhanSu nhanvien = new NhanVien();
+                               nhanvien.TimKiem();
+                           }
+                           case 2->{
+                               System.out.println("-------Sửa Lao Công------");
+                               NhanSu laocong = new LaoCong();
+                               laocong.TimKiem();
+                           }
+                           case 3 ->{
+                               System.out.println("------Sửa Bảo Vệ-----");
+                               NhanSu baove = new BaoVe();
+                               baove.TimKiem();
+                           }
+                           case 4->{
+                               endTimKiem = 1;
+                           }
+                           default -> {
+                               System.out.println("Không có lựa chọn này!!!");
+                           }
+                       }
+                   }while (endTimKiem == 0);
+               }
+               case 5->{
+                   int endThongTin = 0;
+                   do{
+                       thongTin();
+                       switch (luaChon()){
+                           case 1->{
+                               danhSach();
+                               switch (luaChon()){
+                                   case 1 ->{
+                                       NhanSu.xuatNhanVien();
+                                       NhanSu.xuatLaoCong();
+                                       NhanSu.xuatBaoVe();
+                                   }
+                                   case 2->{
+
+                                   }
+                                   default -> {
+                                       System.out.println("Không có lựa chọn này!!!!");
+                                   }
+                               }
+                           }
+                           case 2->{
+                               danhSach();
+                               switch (luaChon()){
+                                    case 1->{
+                                        NhanSu.outputFile("src/Database/outputNhanVien.txt");
+                                    }
+                                    case 2 ->{
+
+                                    }
+                                   default -> {
+                                        System.out.println("Không có lựa chọn này!!!");
+                                   }
+                               }
+                           }
+                       }
+                   }while (endThongTin == 0);
                }
            }
        }while (endadmin == 0);
