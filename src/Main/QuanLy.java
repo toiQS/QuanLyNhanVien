@@ -74,9 +74,8 @@ public class QuanLy {
         System.out.println("+---------------------------------+");
         System.out.println("|         Danh Sách               |");
         System.out.println("+---------------------------------+");
-        System.out.println("|   1. Hàng Hoá                   |");
-        System.out.println("|   2. Nhân Viên                  |");
-        System.out.println("|   3. Trở về                     |");
+        System.out.println("|   1. Nhân Viên                  |");
+        System.out.println("|   2. Trở về                     |");
         System.out.println("+---------------------------------+");
     }
 
